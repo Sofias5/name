@@ -6,31 +6,20 @@ int mul(int a, int b);
 int div(int a, int b);
 
 int main() {
-    int a;
-    int b;
-    if (int i= 0; i++; i--) {
-        scanf("%d %d", &a, &b);
+    int a, b;
+    char c;
+    if (scanf("%d", &a) != 1 || scanf("%c", &c) != 1 || c != ' ' || scanf("%d", &b) != 1 ||
+        scanf("%c", &c) != 1 || c != '\n') {
+        printf("n/a");
+        return 1;
+    } else {
         printf("%d %d %d ", sum(a, b), sub(a, b), mul(a, b));
         if (b == 0) {
             printf("n/a");
-
         } else {
             printf("%d", div(a, b));
         }
-        while ((scanf("%d", &a)) != 1) {
-            printf("n/a");
-            while (getchar() != '\n')
-                ;
-        }
-        while ((scanf("%d", &b)) != 1) {
-            printf("n/a");
-            while (getchar() != '\n')
-                ;
-        }
-    } else {
-        printf("n/a");
     }
-
     return 0;
 }
 
